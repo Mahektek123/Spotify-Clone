@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        html {
+            /* padding-top: 0px; */
+            font-family: 'Lato', sans-serif;
+        }
+
+        body {
+            margin-top: 0%;
+            background-color: rgb(48, 48, 48);
+            color: aliceblue;
+            font-family: 'Lato', sans-serif;
+        }
+        .logins {
+            display: flex;
+            list-style: none;
+        }
+        .logins li {
+            color: black;
+            font-size: 20px;
+            /* margin: 20px; */
+            margin-top: 13px;
+            padding-top: 7px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 11px;
+            width: 85px;
+            height: 15px;
+        }
+
+        #login {
+            border: 2px solid white;
+            background-color: white;
+            border-radius: 30px;
+            padding-top: 10px;
+        }
+        #login:hover{
+            background-color: rgb(206, 205, 205);
+            width: 95px;
+        }
+
+        #white {
+            margin-top:18px ;
+            color: rgb(182, 181, 181);
+        }
+        #white:hover{
+            color: white;
+        }
+
+        .nav {
+            margin-top: -17px;
+            margin-left: -17px;
+            padding-left: 1000px;
+            background-color: rgb(31, 31, 31);
+            content: "";
+            width: 280px;
+            height: 72px;
+
+        }
+        .head {
+            margin-top: 40px;
+        }
+        
+        #focus {
+            margin-left: 35px;
+            margin-right: 35px;
+            font-size: 25px;
+            color: beige;
+            /* display: flex; */
+        }
+        .main{
+            /* border: 2px solid red; */
+            margin-left:35px;
+            display: flex;
+            margin-bottom:24px ;
+        }
+        .box{
+            /* border: 2px solid red; */
+            margin-right: 24px;
+            border-radius: 12px;
+            height: 220px;
+            width: 220px;
+        }
+        #prodcasts{
+            background-color: rgb(74, 128, 96);
+        }
+        #prodcasts:hover{
+            background-color: rgb(106, 188, 138);
+        }
+        #foryou{
+            background-color: rgb(31, 31, 108);
+        }
+        #foryou:hover{
+            background-color: rgb(67, 67, 220);
+            
+        }
+        #charts{
+            background-color: rgb(76, 27, 97);
+        }
+        #charts:hover{
+            background-color: rgb(162, 59, 207);
+        }
+        #newreleases{
+            background-color: rgb(182, 0, 67);
+        }
+        #newreleases:hover{
+            background-color: rgb(255, 9, 99);
+        }
+        #disco{
+            background-color: rgb(76, 27, 97);
+        }
+        #disco:hover{
+            background-color: rgb(162, 59, 207);
+        }
+        #Live{
+            background-color: rgb(85, 1, 168);
+        }
+        #Live:hover{
+            background-color: rgb(128, 1, 255)
+        }
+        #Bolly{
+            background-color: rgb(110, 11, 60);
+        }
+        #Bolly:hover{
+            background-color: rgb(190, 20, 105);
+        }
+        #panjabi{
+            background-color: rgb(91, 35, 143);
+        }
+        #panjabi:hover{
+            background-color: rgb(154, 64, 238);
+        }
+        #Tamil{
+            background-color: brown;
+        }
+        #Tamil:hover{
+            background-color: rgb(218, 98, 98);;
+        }
+        #Telugu{
+            background-color: black;;
+        }
+        #Telugu:hover{
+            background-color: rgb(79, 75, 75);
+        }
+        #Indie{
+            background-color: rgb(0, 89, 134);
+        }
+        #Indie:hover{
+            background-color: rgb(3, 141, 210);
+        }
+        #gamming{
+            background-color: blueviolet;
+        }
+        #gamming:hover{
+            background-color: rgb(178, 98, 253);
+        }
+        #equal{
+            background-color: rgb(74, 128, 96);
+        }
+        #equal:hover{
+            background-color: rgb(106, 188, 138);
+        }
+        #pop{
+            background-color: rgb(0, 0, 0);
+        }
+        #pop:hover{
+            background-color: rgb(95, 95, 95);
+        }
+        #radar{
+            background-color: rgb(208, 0, 0);
+        }
+        #radar:hover{
+            background-color: rgb(249, 77, 77);
+        }
+        #Fresh{
+            background-color: rgb(118, 99, 127);
+        }
+        #Fresh:hover{
+            background-color: rgb(192, 153, 210);
+        }
+        #marathi{
+            background-color: rgb(208, 0, 0);
+        }
+        #marathi:hover{
+            background-color: rgb(255, 67, 67);
+        }
+        #wellness{
+            background-color: rgb(130, 156, 0);
+        }
+        #wellness:hover{
+            background-color: rgb(212, 255, 0);
+        }
+        #devo{
+            background-color: rgb(0, 155, 5);
+        }
+        #devo:hover{
+            background-color: rgb(3, 255, 11);
+        }
+        #indiancla{
+            background-color: rgb(170, 2, 119);
+        }
+        #indiancla:hover{
+            background-color: rgb(255, 0, 179);
+        }
+        #happyholi{
+            background-color: rgb(178, 42, 1);
+        }
+        #happyholi:hover{
+            background-color: rgb(255, 68, 11);
+        }
+        #rommanc{
+            background-color: rgb(74, 128, 96);
+        }
+        #rommanc:hover{
+            background-color: rgb(106, 188, 138);
+        }
+        #Decedes{
+            background-color: rgb(74, 128, 96);
+        }
+        #Decedes:hover{
+            background-color: rgb(106, 188, 138);
+        }
+        #k-pop{
+            background-color: rgb(0, 155, 5);
+        }
+        #k-pop:hover{
+            background-color: rgb(0, 253, 8);
+        }
+        #netflix{
+            background-color: rgb(141, 40, 3);
+        }
+        #netflix:hover{
+            background-color: rgb(252, 73, 9);
+        }
+        #disney{
+            background-color: rgb(93, 126, 182);
+        }
+        #disney:hover{
+            background-color: rgb(151, 189, 255);
+        }
+        #hippop{
+            background-color: rgb(0, 155, 5);
+        }
+        #hippop:hover{
+            background-color: rgb(0, 255, 8);
+        }
+        #party{
+            background-color: blue;
+        }
+        #party:hover{
+            background-color: rgb(132, 132, 255);
+        }
+        #instru{
+            background-color: rgb(74, 128, 96);
+        }
+        #instru:hover{
+            background-color: rgb(106, 188, 138);
+        }
+        #dance{
+            background-color: rgb(141, 40, 3);
+        }
+        #dance:hover{
+            background-color: rgb(240, 71, 10);
+        }
+        #student{
+            background-color: rgb(33, 91, 0);
+        }
+        #student:hover{
+            background-color: rgb(62, 167, 1);
+        }
+        #chill{
+            background-color: rgb(74, 128, 96);
+        }
+        #chill:hover{
+            background-color: rgb(106, 188, 138);
+        }
+        #Mood{
+            background-color: rgb(33, 91, 0);
+        }
+        #Mood:hover{
+            background-color: rgb(63, 171, 0);
+        }
+        #Higher{
+            background-color: rgb(170, 2, 119);
+        }
+        #Higher:hover{
+            background-color: rgb(227, 2, 160);
+        }
+        #Pride{
+            background-color: rgb(135, 140, 0);
+        }
+        #Pride:hover{
+            background-color: rgb(223, 234, 3);
+        }
+        #Workout{
+            background-color: rgb(0, 155, 5);
+        }
+        #Workout:hover{
+            background-color: rgb(9, 230, 16);
+        }
+        #falk{
+            background-color: rgb(1, 14, 111);
+        }
+        #falk:hover{
+            background-color: rgb(0, 30, 255);
+        }
+        #sleep{
+            background-color: rgb(170, 2, 119);
+        }
+        #sleep:hover{
+            background-color: rgb(255, 0, 179);
+        }
+        #kids{
+            background-color: rgb(0, 155, 5);
+        }
+        #kids:hover{
+            background-color: rgb(3, 227, 11);
+        }
+        #athome{
+            background-color: blue;
+        }
+        #athome:hover{
+            background-color: rgb(125, 125, 243);
+        }
+        #randb{
+            background-color: rgb(208, 0, 0); 
+        }
+        #randb:hover{
+            background-color: rgb(248, 84, 84); 
+        }
+        #Tastemakers{
+            background-color: rgb(33, 91, 0);
+        }
+        #Tastemakers:hover{
+            background-color: rgb(98, 217, 28);
+        }
+        #rock{
+            background-color: rgb(74, 128, 96);
+        }
+        #rock:hover{
+            background-color: rgb(106, 188, 138);
+        }
+        #Focus{
+            background-color: rgb(217, 0, 108);
+        }
+        #Focus:hover{
+            background-color: rgb(255, 46, 150);
+        }
+        #summer{
+            background-color: rgb(141, 40, 3);
+        }
+        #summer:hover{
+            background-color: rgb(217, 73, 20);
+        }
+        #Cooking{
+            background-color: rgb(165, 42, 42);
+        }
+        #Cooking:hover{
+            background-color: rgb(255, 68, 68);
+        }
+        #jazz{
+            background-color: rgb(33, 91, 0);
+        }
+        #jazz:hover{
+            background-color: rgb(76, 208, 0);
+        }
+        #api{
+            background-color: rgb(170, 2, 119);
+        }
+        #api:hover{
+            background-color: rgb(238, 10, 169);
+        }
+        #soul{
+            background-color: rgb(1, 14, 111);
+        }
+        #soul:hover{
+            background-color: rgb(5, 33, 243);
+        }
+        #Caribbean{
+            background-color: rgb(1, 120, 112);
+        }
+        #Caribbean:hover{
+            background-color: rgb(0, 207, 193);
+        }
+        #classical{
+            background-color: rgb(170, 2, 119);
+        }
+        #classical:hover{
+            background-color: rgb(232, 3, 163);
+        }
+        #Latin{
+            background-color: rgb(141, 40, 3);
+        }
+        #Latin:hover{
+            background-color: rgb(255, 68, 0);
+        }
+        #Metal{
+            background-color: rgb(170, 2, 119);
+        }
+        #Metal:hover{
+            background-color: rgb(244, 7, 173);
+        }
+        #Blues{
+            background-color: rgb(74, 128, 96);
+        }
+        #Blues:hover{
+            background-color: rgb(106, 188, 138);
+        }
+        #funk{
+            background-color: rgb(217, 0, 108);
+        }
+        #funk:hover{
+            background-color: rgb(255, 93, 174);
+        }
+        #punk{
+            background-color: rgb(33, 91, 0);
+        }
+        #punk:hover{
+            background-color: rgb(70, 181, 6);
+        }
+        #Travel{
+            background-color: rgb(165, 42, 42);
+        }
+        #Travel:hover{
+            background-color: rgb(255, 66, 66);
+        }
+        #Country{
+            background-color: rgb(178, 42, 1);
+        }
+        #Country:hover{
+            background-color: rgb(255, 60, 0);
+        }
+        #Animey{
+            background-color: rgb(6, 119, 3);
+        }
+        #Animey:hover{
+            background-color: rgb(13, 225, 6);
+        }
+        #Songwriters{
+            background-color: rgb(208, 0, 0);
+        }
+        #Songwriters:hover{
+            background-color: rgb(255, 95, 95);
+        }
+        #TV{
+            background-color: rgb(1, 14, 111);
+        }
+        #TV:hover{
+            background-color: rgb(5, 30, 217);
+        }
+        #Ambient{
+            background-color: rgb(170, 2, 119);
+        }
+        #Ambient:hover{
+            background-color: rgb(249, 5, 176);
+        }
+        #Music{
+            background-color: rgb(0, 155, 5);
+        }
+        #Music:hover{
+            background-color: rgb(3, 246, 12);
+        }
+        #Athome{
+            background-color: rgb(74, 128, 96);
+        }
+        #Athome:hover{
+            background-color: rgb(106, 188, 138);
+        }
+        #ibox{
+            font-size: 25px;
+            color: beige;
+            padding-left: 20px;
+        }
+        .last{
+            padding: 80px;
+        }
+        a{
+            text-decoration-line: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <ul class="logins">
+                <li id="white">Sign up</li>
+                <center>
+                    <li id="login">Log in</li>
+                </center>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="head" style="display: flex;">
+            <div style="display: flex;">
+                <h3 id="focus">Browse all</h3>
+            </div>
+        </div>
+        <div class="main">
+            <div class="box" id="prodcasts" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Prodcasts</h3></a>
+            </div>
+            <div class="box" id="foryou" style="display: flex;">
+                <a href="" ><h3 id="ibox">For You</h3></a>
+            </div>
+            <div class="box" id="charts" style="display: flex;">
+                <a href="" ><h3 id="ibox">Charts</h3></a>
+            </div>
+            <div class="box" id="newreleases" style="display: flex;">
+                <a href="" ><h3 id="ibox">New Releases</h3></a>
+            </div>
+            <div class="box" id="disco" style="display: flex;">
+                <a href="" ><h3 id="ibox">Discover</h3></a>
+            </div>
+         </div>
+        <div class="main">
+            <div class="box" id="Live" style="display: flex;">
+                <a href="" ><h3 id="ibox">Live Event</h3></a>
+            </div>
+            <div class="box" id="Bolly" style="display: flex;">
+                <a href="" ><h3 id="ibox">Bollywood</h3></a>
+            </div>
+            <div class="box" id="panjabi" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Panjabi</h3></a>
+            </div>
+            <div class="box" id="Tamil" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Tamil</h3></a>
+            </div>
+            <div class="box" id="Telugu" style="display: flex;">
+                <a href="" ><h3 id="ibox">Telugu</h3></a>
+            </div>
+         </div>
+        <div class="main">
+            <div class="box" id="Indie" style="display: flex;">
+                <a href="" ><h3 id="ibox">Indie</h3></a>
+            </div>
+            <div class="box" id="gamming" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Gamming</h3></a>
+            </div>
+            <div class="box" id="equal" style="display: flex;">
+                <a href="" ><h3 id="ibox">EQUAL</h3></a>
+            </div>
+            <div class="box" id="pop" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Pop</h3></a>
+            </div>
+            <div class="box" id="radar" style="display: flex; ">
+                <a href="" ><h3 id="ibox">RADAR</h3></a>
+            </div>
+         </div>
+        <div class="main">
+            <div class="box" id="Fresh" style="display: flex;">
+                <a href="" ><h3 id="ibox">Fresh Find</h3></a>
+            </div>
+            <div class="box" id="marathi" style="display: flex;  ">
+                <a href="" ><h3 id="ibox">Marathi</h3></a>
+            </div>
+            <div class="box" id="wellness" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Wellness</h3></a>
+            </div>
+            <div class="box" id="devo" style="display: flex;">
+                <a href="" ><h3 id="ibox">devotional</h3></a>
+            </div>
+            <div class="box" id="indiancla" style="display: flex;">
+                <a href="" ><h3 id="ibox">Indian classical</h3></a>
+            </div>
+         </div>
+        <div class="main">
+            <div class="box" id="rommanc" style="display: flex;">
+                <a href="" ><h3 id="ibox">Romance</h3></a>
+            </div>
+            <div class="box" id="happyholi" style="display: flex;">
+                <a href="" ><h3 id="ibox">Happy Holiday</h3></a>
+            </div>
+            <div class="box" id="Decedes" style="display: flex;">
+                <a href="" ><h3 id="ibox">Decedes</h3></a>
+            </div>
+            <div class="box" id="k-pop" style="display: flex;">
+                <a href="" ><h3 id="ibox">K-Pop</h3></a>
+            </div>
+            <div class="box" id="netflix" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Netflix</h3></a>
+            </div>
+         </div>
+        <div class="main">
+            <div class="box" id="disney" style="display: flex;">
+                <a href="" ><h3 id="ibox">Disney</h3></a>
+            </div>
+            <div class="box" id="hippop" style="display: flex;">
+                <a href="" ><h3 id="ibox">Hip-Hop</h3></a>
+            </div>
+            <div class="box" id="party" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Party</h3></a>
+            </div>
+            <div class="box" id="instru" style="display: flex;">
+                <a href="" ><h3 id="ibox">Instrumental</h3></a>
+            </div>
+            <div class="box" id="dance" style="display: flex;">
+                <a href="" ><h3 id="ibox">Dance/Electronic</h3></a>
+            </div>
+         </div>
+        <div class="main">
+            <div class="box" id="student" style="display: flex;">
+                <a href="" ><h3 id="ibox">student</h3></a>
+            </div>
+            <div class="box" id="chill" style="display: flex;">
+                <a href="" ><h3 id="ibox">Chill</h3></a>
+            </div>
+            <div class="box" id="Mood" style="display: flex;">
+                <a href="" ><h3 id="ibox">Mood</h3></a>
+            </div>
+            <div class="box" id="Higher" style="display: flex;">
+                <a href="" ><h3 id="ibox">Higher Ground</h3></a>
+            </div>
+            <div class="box" id="Pride" style="display: flex;">
+                <a href="" ><h3 id="ibox">Pride</h3></a>
+            </div>
+         </div>
+        <div class="main">
+            <div class="box" id="Workout" style="display: flex;">
+                <a href="" ><h3 id="ibox">Workout</h3></a>
+            </div>
+            <div class="box" id="falk" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Falk & Acoustic</h3></a>
+            </div>
+            <div class="box" id="sleep" style="display: flex;">
+                <a href="" ><h3 id="ibox">Sleep</h3></a>
+            </div>
+            <div class="box" id="kids" style="display: flex;">
+                <a href="" ><h3 id="ibox">Kids & Family</h3></a>
+            </div>
+            <div class="box" id="athome" style="display: flex; ">
+                <a href="" ><h3 id="ibox">At home</h3></a>
+            </div>
+         </div>
+        <div class="main">
+            <div class="box" id="randb" style="display: flex;">
+                <a href="" ><h3 id="ibox">R&B</h3></a>
+            </div>
+            <div class="box" id="Tastemakers" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Tastemakers</h3></a>
+            </div>
+            <div class="box" id="rock" style="display: flex;">
+                <a href="" ><h3 id="ibox">Rock</h3></a>
+            </div>
+            <div class="box" id="Focus" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Focus</h3></a>
+            </div>
+            <div class="box" id="summer" style="display: flex;">
+                <a href=""><h3 id="ibox">Summer</h3></a>
+            </div>
+         </div>
+        <div class="main">
+            <div class="box" id="Cooking" style="display: flex;  ">
+                <a href="" ><h3 id="ibox">Cooking & Dining</h3></a>
+            </div>
+            <div class="box" id="jazz" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Jazz</h3></a>
+            </div>
+            <div class="box" id="api" style="display: flex;  ">
+                <a href="" ><h3 id="ibox">API Heritage Month</h3></a>
+            </div>
+            <div class="box" id="Caribbean" style="display: flex;">
+                <a href="" ><h3 id="ibox">Caribbean</h3></a>
+            </div>
+            <div class="box" id="soul" style="display: flex; ">
+                <a href="" ><h3 id="ibox">soul</h3></a>
+            </div>
+         </div>
+        <div class="main">
+            <div class="box" id="classical" style="display: flex; ">
+                <a href="" ><h3 id="ibox">classical</h3></a>
+            </div>
+            <div class="box" id="Latin" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Latin</h3></a>
+            </div>
+            <div class="box" id="Metal" style="display: flex;">
+                <a href="" ><h3 id="ibox">Metal</h3></a>
+            </div>
+            <div class="box" id="Blues" style="display: flex;">
+                <a href="" ><h3 id="ibox">Blues</h3></a>
+            </div>
+            <div class="box" id="funk" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Funk</h3></a>
+            </div>
+         </div>
+        <div class="main">
+            <div class="box" id="punk" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Punk</h3></a>
+            </div>
+            <div class="box" id="Travel" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Travel</h3></a>
+            </div>
+            <div class="box" id="Country" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Country</h3></a>
+            </div>
+            <div class="box" id="Animey" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Animey</h3></a>
+            </div>
+            <div class="box" id="Songwriters" style="display: flex;">
+                <a href="" ><h3 id="ibox">Songwriters</h3></a>
+            </div>
+         </div>
+        <div class="main">
+            <div class="box" id="TV" style="display: flex; ">
+                <a href="" ><h3 id="ibox">TV & Movies</h3></a>
+            </div>
+            <div class="box" id="Ambient" style="display: flex;">
+                <a href="" ><h3 id="ibox">Ambient</h3></a>
+            </div>
+            <div class="box" id="Music" style="display: flex; ">
+                <a href="" ><h3 id="ibox">Music + Talk</h3></a>
+            </div>
+            <div class="box" id="Athome" style="display: flex">
+                <a href="" ><h3 id="ibox">At home</h3></a>
+            </div>
+         </div>
+
+        
+    </main>
+    <footer>
+        <div class="last">
+            <hr color="black">
+        </div>
+    </footer>
+</body>
+</html>
